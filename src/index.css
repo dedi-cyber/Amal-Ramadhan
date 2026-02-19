@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-ramadan-bg: #fdfcf8;
+  --color-ramadan-ink: #2c2c2c;
+  --color-ramadan-accent: #5a5a40;
+  --color-ramadan-gold: #c5a059;
+  --color-ramadan-paper: #ffffff;
+}
+
+@layer base {
+  body {
+    @apply bg-ramadan-bg text-ramadan-ink font-sans;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-sm border border-black/5 rounded-3xl shadow-sm;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-ramadan-gold/30 rounded-full;
+}
+
